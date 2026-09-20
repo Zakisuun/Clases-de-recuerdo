@@ -1,0 +1,11 @@
+package pelea;
+
+public class LaunchPelea {
+
+	public static void main(String[] args) {
+		asilo a = new asilo();
+		a.pelea();
+
+	}
+
+}
