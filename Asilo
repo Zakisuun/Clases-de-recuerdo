@@ -1,0 +1,33 @@
+package pelea;
+
+public class asilo {
+	
+	private Anciano anciano1;
+	private Anciano anciano2;
+	
+	public void pelea () {
+		preparacion ();
+		ejecucion();
+		victoria();
+	}
+	
+	private void preparacion () {
+		anciano1 = new Anciano("xd", "el mas viejo", "le da un pueñete a ", "da con su baston a", "patea a");
+		anciano2 = new Anciano("dx", "el menos viejo", "le da un pueñete a ", "da con su baston a", "patea a");
+	}
+	
+	private void presentacion () {
+		System.out.println("");
+	}
+	
+	private void ejecucion () {
+		anciano1.atacar(anciano2);
+		anciano2.atacar(anciano1);
+		
+	}
+
+	private void victoria () {
+	
+}
+
+}
