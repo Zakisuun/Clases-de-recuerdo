@@ -1,0 +1,86 @@
+package pelea;
+
+import java.util.Random;
+
+public class Anciano {
+	private String nombre;
+	private String apodo;
+	
+	private int vida = 100;
+	
+	//min > 0.1 pq no puede ser 0
+	//juventud + colageno + saludDeRodillas = 1
+	private double juventud; //0.1-0.8
+	private double colageno; //0.1-0.8
+	private double saludDeRodillas; //0.1-0.8
+	
+	private String ataqueDebil;
+	private String ataqueFuerte;
+	private String finisher;
+	
+	
+	private Random rnd = new Random();
+	
+	
+	public Anciano(String nombre, String apodo, String ataqueDebil, String ataqueFuerte, String finisher) {
+		this.nombre = nombre;
+		this.apodo = apodo;
+		this.ataqueDebil = ataqueDebil;
+		this.ataqueFuerte = ataqueFuerte;
+		this.finisher = finisher;
+		
+		this.juventud = 0.1 + rnd.nextDouble() * (0.8 - 0.1);
+		this.colageno = 0.1 + rnd.nextDouble() * (0.8 - juventud);
+		this.saludDeRodillas = 1 - juventud - colageno;
+		
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+	
+	public void atacar(Anciano victima) {
+		double aleatorio = rnd.nextDouble();
+		if (aleatorio < 0.5) {
+			ataqueDebil(victima);
+		} else if (aleatorio < 0.4) {
+			ataqueFuerte(victima);
+		} else {
+			finisher(victima);
+		}
+	}
+	
+	
+	private void ataqueDebil (Anciano victima) {
+		int cantidad = (int)(40*juventud); //cast
+		System.out.println(nombre + " " + ataqueDebil +  
+				victima.getNombre() + " por " + cantidad + 
+				" puntos de vida");
+		victima.recibirAtaque(cantidad);
+		
+	}
+	
+	private void ataqueFuerte (Anciano victima) {
+		int cantidad = (int)(60*juventud); //cast
+		System.out.println(nombre + " " + ataqueFuerte +  
+				victima.getNombre() + " por " + cantidad + 
+				" puntos de vida");
+		victima.recibirAtaque(cantidad);
+		
+	}
+	
+	private void finisher (Anciano victima) {
+		int cantidad = (int)(100*juventud); //cast
+		System.out.println(nombre + " " + finisher +  
+				victima.getNombre() + " por " + cantidad + 
+				" puntos de vida");
+		victima.recibirAtaque(cantidad);
+		
+	}
+	
+	public void recibirAtaque(int cantidad) {
+		//TODO
+		
+	}
+}
+
