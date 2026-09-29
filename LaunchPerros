@@ -1,0 +1,43 @@
+package perros;
+
+public class LaunchPerros {
+
+	public static void main(String[] args) {
+		Perro p = new Perro("Firulais");
+		p.ladrar();
+		p.comer();
+		
+		PastorAleman a = new PastorAleman("Firulais");
+		a.ladrar();
+		a.comer();
+		a.perseguirLadron();
+		
+		Chihuahua c = new Chihuahua();
+		c.ladrar();
+		c.comer();
+		c.parecerRata();
+		
+		Perro p1 = new PastorAleman("Firulais");
+		p1 = new Chihuahua();
+		
+		Veterinaria v = new Veterinaria();
+		v.curarPerro(p);
+		v.curarPerro(a);
+		v.curarPerro(c);
+		
+		Perro p2 = new Chihuahua();
+//		p2.ladrar();
+//		p2.parecerRata();
+//		p2.comer();
+		
+		v.curarPerro(new Chihuahua());
+
+		v.curarPerro(new Bulldog("Firulais"));
+		
+		PastorAlemanDeAduana p3 = new PastorAlemanDeAduana("Firulais");
+		p3.detectarDroga();
+		p3.perseguirLadron();
+		p3.ladrar();
+
+}
+}
