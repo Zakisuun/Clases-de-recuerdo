@@ -1,0 +1,21 @@
+package perros;
+
+public class Perro {
+	private String nombre;
+	
+	public Perro(String nombre) {
+		this.nombre = nombre;
+	}
+	public void ladrar() {
+		System.out.println("Guau guau");
+		System.out.println("Ola, me llamo " + nombre);
+	}
+	
+	public String getNombre() {
+		return nombre;
+	}
+	
+	public void comer() {
+		System.out.println("Miam miam");
+	}
+}
