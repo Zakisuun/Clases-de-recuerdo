@@ -1,0 +1,8 @@
+package perros;
+
+public class Veterinaria {
+	public void curarPerro(Perro p) {
+		p.ladrar();
+	}
+
+}
