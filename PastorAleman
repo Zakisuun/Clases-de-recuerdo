@@ -1,0 +1,13 @@
+package perros;
+
+public class PastorAleman extends Perro{
+	public PastorAleman(String nombre) {
+		super(nombre);
+	}
+	
+	public void perseguirLadron() {
+		System.out.println("Alto ahi! Soy " + getNombre());
+		
+	}
+
+}
