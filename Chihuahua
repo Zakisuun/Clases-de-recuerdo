@@ -1,0 +1,18 @@
+package perros;
+
+public class Chihuahua extends Perro{
+	
+	public Chihuahua() {
+		super("Rata inmunda");
+		
+	}
+	
+	public void parecerRata() {
+		System.out.println("KJJJJJ");
+	}
+	
+	@Override
+	public void ladrar() { //Sobreescritura - override
+		parecerRata();
+	}
+}
