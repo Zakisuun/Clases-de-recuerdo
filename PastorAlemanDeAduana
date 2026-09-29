@@ -1,0 +1,12 @@
+package perros;
+
+public class PastorAlemanDeAduana extends PastorAleman{
+	public PastorAlemanDeAduana(String nombre) {
+		super(nombre);
+	}
+	
+	public void detectarDroga() {
+		System.out.println("Sniff sniff");
+	}
+
+}
