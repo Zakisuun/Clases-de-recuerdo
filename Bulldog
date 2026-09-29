@@ -1,0 +1,12 @@
+package perros;
+
+public class Bulldog extends Perro {
+	public Bulldog(String nombre) {
+		super(nombre);
+	}
+	
+	public void babear () {
+		System.out.println("SLURP");
+	}
+
+}
